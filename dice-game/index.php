@@ -1,5 +1,9 @@
 <?php 
     session_start();
+
+    if (!isset($_SESSION['username'])) {
+        header("location:login.php");
+    };
     
 ?>
 
@@ -23,7 +27,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-8"></div>
-            <div class="col-md-4"><a class="btn btn-info" href="stats.php"><?php echo $_SESSION['username']?></a>&nbsp<a class="btn btn-info" href="login.php" >Logout</a></div>
+            <div class="col-md-4"><a class="btn btn-info" href="stats.php"><?php echo $_SESSION['username']?></a>&nbsp<a class="btn btn-info" href="login.php?logout" >Logout</a></div>
         </div>
 
         <div class="row">

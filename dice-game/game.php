@@ -21,6 +21,7 @@ try {
         $statement->execute();
         $response['result'] = $statement->fetchAll(PDO::FETCH_ASSOC);
     }
+    
     $conn = null;
 } catch(PDOException $e) {
     $response['message'] = ['type' => 'danger','body' => $e->getMessage()];

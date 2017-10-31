@@ -16,7 +16,6 @@ $(document).ready(function(){
 $(document).ready(function(){
     
     var win_total = 0;
-    var win_single = 0;
     
     $("#newGame").click(function(){
         $("#rollDice").css("display","inline");
